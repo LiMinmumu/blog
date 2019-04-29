@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盘石微名片-会营销的AI小程序名片</title>
+    <meta name="description" content="盘石微名片，一张用人工智能重新定义销售的小程序名片，赋予企业销售力量，彻底打通销售人员、企业管理者与客户之间的关系，通过提供名片裂变系统、人脉分销商城、超级小程序官网、AI销售雷达、BOSS管理系统，实现裂变聚合流量、客户跟进和沉淀，帮助企业解决销售难题实现客户沉淀和转化。"/>
+    <meta name="keywords" content="盘石微名片,人工智能微名片,小程序,名片商城,AI名片,浙江盘石,智能营销名片,微信商城,微信公众平台,微信小程序,名片,名片小程序,CRM系统,电子名片"/>
+    <link rel="icon" href="https://cardstatic.panshi101.com//image/card/hkt.png" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+	<style>
+	@font-face{
+    font-family: DIN-Medium;
+    src: url(./font/DIN-Medium.otf);
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+header.scrolled{
+    transition: all 1s;
+    background:#fff;
+    box-shadow:0px 5px 16px 0px rgba(213,219,226,0.23), 0px -1px 0px 0px inset rgba(238,238,238,1);
+}
+header.scrolled ul li a{
+    color: #666;
+    opacity: 1;
+}
+header.scrolled li.active a{
+    color: #249BFF;
+}
+header.scrolled ul li.free  {
+    background:rgba(30,211,132,1);
+    border-radius:3px;
+}
+header.scrolled ul li.free a{
+    color: #fff;
+}
+header.scrolled .navi ul li.interval{
+    background:#999;
+}
+header .container{
+    width: 1160px;
+    height: 100px;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+    line-height: 1;
+}
+header .logo img{
+    display: block;
+    width: 181px;
+    height: 51px;
+}
+.navi ul{
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+.navi ul li{
+    margin-left: 50px;
+    font-size: 18px;
+   
+}
+.navi ul li a{
+    color: #fff;
+    opacity: 0.6;
+}
+.navi ul li:last-child{
+    padding: 10px 22px;
+    border-radius:3px;
+    font-size: 16px;
+    opacity: 1;
+    line-height: 1;
+    background:rgba(255,255,255,0.3);
+}
+.navi ul li.interval{
+    width:1px;
+    height:18px;
+    background:rgba(255,255,255,1);
+    opacity:0.4;
+}
+.navi ul li.active a{
+    opacity: 1;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    /* height: 560px; */
+    min-width: 1160px;
+}
+.swiper-pagination .swiper-pagination-bullet{
+    width: 16px;
+    height: 16px;
+    background: #fff
+}
+.swiper-container{
+     width: 100%;
+    min-width: 1160px;
+}
+.swiper-container.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 10px;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets{
+    bottom:40px;
+}
+.point{
+    width: 100%;
+    min-width: 1160px;
+    height: 415px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+.point .container{
+    width: 1160px;
+    margin: 0 auto
+}
+.container h2{
+    text-align: center;
+    font-size:36px;
+    font-weight:600;
+    color:rgba(51,51,51,1);
+    line-height:1;
+}
+.point .container h2{
+    margin-bottom: 75px;
+}
+.container h2 span{
+    position: relative;
+}
+
+.container h2 span::before{
+    content: "";
+    width:27px;
+    height: 16px;
+    position: absolute;
+    top: 18px;
+    left: -65px;
+    background: url(../images/index/title-left.png)
+}
+.container h2 span::after{
+    content: "";
+    width:27px;
+    height: 16px;
+    position: absolute;
+    top: 18px;
+    right: -65px;
+    background: url(../images/index/title-right.png)
+}
+
+.point ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 78px;
+    text-align: center;
+}
+.point ul li img{
+    display: block;
+    width: 90px;
+    height: 90px;
+}
+.point ul li p{
+    margin-top: 33px;
+    font-size: 30px;
+    color:#666;
+    line-height: 1;
+}
+
+.solution{
+    min-width: 1160px;
+   background-color:  #FAFBFC;
+}
+.solution .container{
+    width: 1160px;
+    margin: 0 auto;
+}
+.solution h2{
+    padding: 80px 0 70px;
+}
+.solution .container>ul{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+.solution ul li{
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+.solution .container>ul>li{
+    align-items: center;
+    width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.solution .container>ul>li+li{
+    margin-top:20px; 
+}
+.solution .left{
+    max-width: 477px;
+}
+.solution .left h3{
+    font-size: 30px;
+    color: #333;
+    line-height: 1;
+    z-index: 2;
+    position: relative;
+}
+.solution .left h3.first::after{
+    content: "01";
+}
+.solution .left h3.second::after{
+    content: "02";
+}
+.solution .left h3.third::after{
+    content: "03";
+}
+.solution .left h3.fourth::after{
+    content: "04";
+}
+.solution .left h3.fifth::after{
+    content: "05";
+}
+.solution .left h3.sixth::after{
+    content: "06";
+}
+.solution .left h3::after{
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    font-size: 126px;
+    color: #ddd;
+    z-index: -1;
+    opacity: 0.18;
+    font-family:  DIN-Medium;
+}
+.solution .left ul{
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 48px;
+}
+.solution .left ul.specical{
+    flex-wrap: wrap;
+}
+.solution .left ul.specical li{
+    width: 134px;
+}
+.solution .left ul.specical li:first{
+    margin-right: 30px;
+}
+.solution .left ul.specical li:nth-child(3){
+    margin-left: 0;
+    margin-top: 20px;
+}
+.solution .left ul.specical li:nth-child(4){
+    margin-top: 20px;
+    margin-left: 0;
+}
+.solution .left ul li{
+    display: -webkit-flex;
+    display: flex;
+}
+.solution .left ul li span{
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    background: rgba(218,218,218,1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 20px;
+    color: #fff;
+}
+.solution .left ul li+li{
+    margin: 0 30px;
+}
+.solution .left ul li p{
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+.solution .left h4{
+    margin-top: 30px;
+    font-size: 16px;
+    color: #666;
+    line-height: 32px;
+}
+.solution .right img{
+    display: block;
+    width: 450px;
+    height: 450px;
+}
+.problem{
+    min-width: 1160px;
+    background-color: #fff;
+}
+.problem .container{
+    width: 1160px;
+    margin: 0 auto;
+}
+.problem h2{
+    padding: 80px 0;
+}
+.problem ul{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.problem ul{
+    margin-bottom: 80px;
+}
+.problem ul li img{
+    display: block;
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+}
+.problem ul li p:nth-child(2){
+    margin: 40px auto 20px;
+    font-weight: 600;
+    font-size: 18px;
+    color:#333;
+}
+.problem ul li p{
+    font-size: 16px;
+    color:#666;
+}
+.problem ul li p:last-child{
+    margin-top: 10px;
+}
+.scene{
+    min-width: 1160px;
+    background-color: #FAFBFC;
+}
+.scene .container{
+    width: 1160px;
+    margin: 0 auto;
+}
+.scene h2{
+    padding: 80px 0;
+}
+.scene img{
+    display: block;
+    width: 1160px;
+    height: 388px;
+    padding-bottom: 80px;
+}
+
+footer{
+    width: 100%;
+    min-width: 1160px;
+    height: 490px;
+    padding: 50px 0 80px;
+    box-sizing: border-box;
+    background: url(../images/footer-bg.png) no-repeat center;
+    background-size: cover;
+}
+footer .container{
+    width: 1160px;
+    margin: 0 auto;
+}
+footer .top{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+footer .top h5{
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.3;
+}
+footer .top .left{
+    line-height: 1;
+}
+footer .about ul{
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 20px;
+}
+footer .about ul li{
+    padding:0 20px;
+}
+footer .about ul li:first-child{
+    padding-left: 0;
+}
+footer .about ul li:nth-child(2){
+    border-left: 1px solid rgba(255,255,255,0.6);
+    border-right: 1px solid rgba(255,255,255,0.6);
+}
+footer .about ul li a{
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.6;
+}
+footer .contactus{
+    margin-top: 60px;
+}
+footer .contactus p{
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.6;
+    margin-top: 20px;
+    overflow: hidden;
+}
+footer .contactus p span{
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid rgba(255,255,255,0.6);
+    line-height: 1;
+    display: inline;
+}
+footer .contactus p:last-child{
+    margin-top: 15px;
+}
+
+footer .right ul{
+    display: -webkit-flex;
+    display: flex;
+    text-align: center;
+}
+footer .right ul li img{
+    display: block;
+    width: 138px;
+    height: 138px;
+}
+footer .right ul li:nth-child(2){
+    margin: 0 78px;
+}
+footer .right ul li p{
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.4;
+    line-height: 1;
+    margin-top: 13px;
+}
+footer .btm{
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+    padding-top: 50px;
+    line-height: 1;
+}
+footer .btm p:last-child{
+    margin-top: 15px;
+}
+footer .btm a{
+    color: rgba(255,255,255,0.3);
+}
+	</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><img src="/official-site/images/logo.png" /></div>
+            <div class="navi">
+                <ul>
+                    <li class="active"><a href="javascript:;">首页</a></li>
+                    <li><a href="/official-site/product.html">产品介绍</a></li>
+                    <li><a href="/official-site/about.html">关于我们</a></li>
+                    <li class="interval"></li>
+                    <li><a href="/card/brand/login_px.jsp">登录</a></li>
+                    <li class="free"><a href="/card/brand/login_px.jsp?type=reg">免费试用</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <a href="/card/brand/login_px.jsp?type=reg"><img src="/official-site/images/index/banner-bg01.png" /></a>
+            </li>
+            <li class="swiper-slide">
+                <a href="/card/brand/login_px.jsp?type=reg"><img src="/official-site/images/index/banner-bg02.jpg" /></a>
+            </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+    </section>
+    <section class="point">
+        <div class="container">
+                <h2><span>企业痛点</span></h2>
+                <ul>
+                    <li>
+                        <img src="/official-site/images/index/point01.png" />
+                        <p>拓客难</p>
+                    </li>
+                    <li>
+                        <img src="/official-site/images/index/point02.png" />
+                        <p>触达难</p>
+                    </li>
+                    <li>
+                        <img src="/official-site/images/index/point03.png" />
+                        <p>成交难</p>
+                    </li>
+                    <li>
+                        <img src="/official-site/images/index/point04.png" />
+                        <p>易流失</p>
+                    </li>
+                </ul>
+        </div>
+    </section>
+    <section class="solution">
+        <div class="container">
+            <h2><span>解决方案</span></h2>
+            <ul>
+                <li>
+                    <div class="left">
+                        <h3 class="first">易裂变的名片</h3>
+                        <ul>
+                            <li><span>1</span><p>微信用户基数大</p></li>
+                            <li><span>2</span><p>易分享</p></li>
+                            <li><span>3</span><p>联系便捷</p></li>
+                        </ul>
+                        <h4>分享小程序名片，打款被动存储，持续触达客户，让销售连接10亿微信用户；你递出的不仅是一张名片，更递出了人、产品、公司、沟通方式</h4>
+                    </div>
+                    <div class="right">
+                        <img src="/official-site/images/index/solution01.png" />
+                    </div>
+                </li>
+                <li>
+                    <div class="right">
+                        <img src="/official-site/images/index/solution02.png" />
+                    </div>
+                    <div class="left">
+                            <h3 class="second">高触达的名片</h3>
+                            <ul>
+                                <li><span>1</span><p>即时通讯</p></li>
+                                <li><span>2</span><p>无需加微信</p></li>
+                                <li><span>3</span><p>标准画像</p></li>
+                            </ul>
+                            <h4>客户访问名片即收到问候语，不需要加微信直接沟通，百分百触达，客户到访记录行为轨迹，形成客户标准画像</h4>
+                        </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h3 class="third">带雷达的名片</h3>
+                        <ul class="specical">
+                            <li><span>1</span><p>行为轨迹追踪</p></li>
+                            <li><span>2</span><p>商机挖掘推送</p></li>
+                            <li><span>3</span><p>兴趣倾向分析</p></li>
+                            <li><span>4</span><p>成交率测算</p></li>
+                        </ul>
+                        <h4>凭借领先的AI技术，实时追踪行为轨迹，智能挖掘出销售社交圈的精准客户，实现流量变现，转化微企业的商务数据和客户资源</h4>
+                    </div>
+                    <div class="right">
+                        <img src="/official-site/images/index/solution03.png" />
+                    </div>
+                </li>
+                <li>
+                    <div class="right">
+                        <img src="/official-site/images/index/solution04.png" />
+                    </div>
+                    <div class="left">
+                        <h3 class="fourth">高转化的名片</h3>
+                        <ul>
+                            <li><span>1</span><p>品牌商城</p></li>
+                            <li><span>2</span><p>多样营销工具</p></li>
+                            <li><span>3</span><p>微信支付</p></li>
+                        </ul>
+                        <h4>品牌商城打通支付功能，通过微名片可以带来业务上的成交业绩，优惠券、砍价等丰富的营销工具吸引用户成交的同时还能主动传播、自动分销、自动裂变实现更多转化</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h3 class="fifth">懂管理的名片</h3>
+                        <ul class="specical">
+                            <li><span>1</span><p>BOSS雷达</p></li>
+                            <li><span>2</span><p>员工管理</p></li>
+                            <li><span>3</span><p>客户交接</p></li>
+                            <li><span>4</span><p>客户查看</p></li>
+                        </ul>
+                        <h4>公司业绩、部门业绩一目了然，可视化员工评测系统，帮助管理者精准识别员工价值，员工综合能力排名帮助管理者随时监督员工销售积极性</h4>
+                    </div>
+                    <div class="right">
+                        <img src="/official-site/images/index/solution05.png" />
+                    </div>
+                </li>
+                <li>
+                    <div class="right">
+                        <img src="/official-site/images/index/solution06.png" />
+                    </div>
+                    <div class="left">
+                        <h3 class="sixth">能沉淀的名片</h3>
+                        <ul>
+                            <li><span>1</span><p>销售漏斗</p></li>
+                            <li><span>2</span><p>客户数据</p></li>
+                            <li><span>3</span><p>离职交接</p></li>
+                        </ul>
+                        <h4>客户引流，跟进，沉淀；客户信息高效沉淀为企业资产，员工离职可一键交接客户资源，企业管理者再无后顾之忧</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="problem">
+        <div class="container">
+            <h2><span>能解决哪些问题</span></h2>
+            <ul>
+                <li>
+                    <img src="/official-site/images/index/problem01.png" />
+                    <p>分裂获客</p>
+                    <p>一间传播，客户扫一扫就添加</p>
+                    <p>永久留存，访客锁定为客户资源</p>
+                </li>
+                <li>
+                    <img src="/official-site/images/index/problem02.png" />
+                    <p>轨迹抓捕</p>
+                    <p>实时追踪客户行为轨迹</p>
+                    <p>掌握需求，及时更进</p>
+                </li>
+                <li>
+                    <img src="/official-site/images/index/problem03.png" />
+                    <p>客户管理</p>
+                    <p>标签化分裂客户</p>
+                    <p>筛选精准客户</p>
+                </li>
+                <li>
+                    <img src="/official-site/images/index/problem04.png" />
+                    <p>画像分析</p>
+                    <p>智能生成客户数据报表</p>
+                    <p>多维度对比分析</p>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <img src="/official-site/images/index/problem05.png" />
+                    <p>直接触达</p>
+                    <p>不加微信直接发起聊天</p>
+                </li>
+                <li>
+                    <img src="/official-site/images/index/problem06.png" />
+                    <p>高效销售</p>
+                    <p>销售漏斗</p>
+                    <p>智能测算成交率</p>
+                </li>
+                <li>
+                    <img src="/official-site/images/index/problem07.png" />
+                    <p>员工分析</p>
+                    <p>同步BOSS系统自动录入</p>
+                    <p>完全保真，全程可追溯</p>
+                </li>
+                <li>
+                    <img src="/official-site/images/index/problem08.png" />
+                    <p>客户沉淀</p>
+                    <p>员工拜访客户自动记录</p>
+                    <p>高效沉淀精准客户</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="scene">
+        <div class="container">
+            <h2><span>线上线下多种应用场景</span></h2>
+            <div>
+                <img src="/official-site/images/index/scene.png" />
+            </div>
+        </div>
+    </section>
+    <section class="problem">
+        <div class="container">
+            <h2><span>服务支持</span></h2>
+            <ul>
+                <li>
+                    <img src="/official-site/images/index/service01.png" />
+                    <p>专业客服答疑</p>
+                    <p>实时在线服务每个客户</p>
+                    <p>用心处理每个问题</p>
+                </li>
+                <li>
+                    <img src="/official-site/images/index/service02.png" />
+                    <p>一对一运营指导</p>
+                    <p>专属客户成功体系</p>
+                    <p>提供多种形式营销指导</p>
+                </li>
+                <li>
+                    <img src="/official-site/images/index/service03.png" />
+                    <p>解决方案支持</p>
+                    <p>结合行业属性</p>
+                    <p>给予针对性解决方案</p>
+                </li>
+                <li>
+                    <img src="/official-site/images/index/service04.png" />
+                    <p>线下运营培训</p>
+                    <p>定期举办多场线下培训会</p>
+                    <p>教您玩转智能名片营销</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <section class="container">
+            <div class="top">
+                <div class="left">
+                    <div class="about">
+                        <h5>关于盘石</h5>
+                        <ul>
+                            <li><a href="http://www.adyun.com/zh-cn/ps_intro.html" target="_blank">盘石简介</a></li>
+                            <li><a href="http://www.adyun.com/zh-cn/ps_culture.html" target="_blank">盘石文化</a></li>
+                            <li><a href="http://www.adyun.com/zh-cn/com-dyn.html" target="_blank">盘石动态</a></li>
+                        </ul>
+                    </div>
+                    <div class="contactus">
+                        <h5>联系我们</h5>
+                        <p>客服热线：400-100-1110 <span>周一至周五 9:00-21:00</span></p>
+                        <p>公司地址：杭州市拱墅区祥园路45号盘石广告大厦</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <img src="/official-site/images/footer01.png" />
+                            <p>微信扫码立即体验</p>
+                        </li>
+                        <li>
+                            <img src="/official-site/images/footer02.png" />
+                            <p>关注微信公众号</p>
+                        </li>
+                        <li>
+                            <a href="https://weibo.com/adyun?topnav=1&wvr=6&topsug=1&is_all=1" target="_blank">
+                                <img src="/official-site/images/footer03.png" />
+                                <p>官方微博 @盘石</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btm">
+                <p>Copyright © 2004-2019 www.panshi101.com. All rights reserved.</p>
+                <p>浙江盘兴信息技术有限公司版权所有 | <a href="http://zj.beian.miit.gov.cn" target="_blank">浙ICP备18048879号-1</a></p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
